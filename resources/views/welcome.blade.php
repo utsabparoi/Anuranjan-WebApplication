@@ -14,7 +14,7 @@
                             Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
                         </p>
                         <div class="carousel-btn">
-                            <a class="btn btn-custom" href="">Donate Now</a>
+                            <a class="btn btn-custom" href="{{route('pages','donate')}}">Donate Now</a>
                             <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                             Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
                         </p>
                         <div class="carousel-btn">
-                            <a class="btn btn-custom" href="">Donate Now</a>
+                            <a class="btn btn-custom" href="{{route('pages','donate')}}">Donate Now</a>
                             <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                             Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam. Proin pellentesque odio
                         </p>
                         <div class="carousel-btn">
-                            <a class="btn btn-custom" href="">Donate Now</a>
+                            <a class="btn btn-custom" href="{{route('pages','donate')}}">Donate Now</a>
                             <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
                         </div>
                     </div>

@@ -17,5 +17,5 @@ Route::view('/','welcome');
 
 // Route::get('/about_us', 'AboutusController@index')->name('about_us');
 
-Route::get('{pages}','AllPages')->name('pages')->where('pages','about_us|contact_us');
+Route::get('{pages}','AllPages')->name('pages')->where('pages','about_us|contact_us|donate');
 

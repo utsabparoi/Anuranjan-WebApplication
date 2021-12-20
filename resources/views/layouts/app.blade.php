@@ -59,7 +59,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Anuranjan</a>
+                <a href="{{url('/')}}" class="navbar-brand">Anuranjan</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -77,7 +77,7 @@
                                 <a href="single.html" class="dropdown-item">Detail Page</a>
                                 <a href="service.html" class="dropdown-item">What We Do</a>
                                 <a href="team.html" class="dropdown-item">Meet The Team</a>
-                                <a href="donate.html" class="dropdown-item">Donate Now</a>
+                                <a href="{{route('pages','donate')}}" class="dropdown-item">Donate Now</a>
                                 <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
                             </div>
                         </div>
@@ -97,9 +97,9 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-contact">
                             <h2>Our Head Office</h2>
-                            <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                            <p><i class="fa fa-map-marker-alt"></i>63/B, Lake Circus, Kalabagan, Dhaka</p>
                             <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                            <p><i class="fa fa-envelope"></i>info@example.com</p>
+                            <p><i class="fa fa-envelope"></i>anuranjan8267@gmail.com</p>
                             <div class="footer-social">
                                 <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
@@ -144,10 +144,10 @@
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                        <p>&copy; <a href="#">Anuranjan</a>, All Right Reserved.</p>
                     </div>
                     <div class="col-md-6">
-                        <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                        <p>Designed By <a href="https://edusoftconsultants.com/" target="_blank">Edusoft Consultant Ltd.</a></p>
                     </div>
                 </div>
             </div>
