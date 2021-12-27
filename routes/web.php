@@ -18,4 +18,18 @@ Route::view('/','welcome');
 // Route::get('/about_us', 'AboutusController@index')->name('about_us');
 
 Route::get('{pages}','AllPages')->name('pages')->where('pages','about_us|contact_us|donate');
+Route::post('/submitDonate', 'DonateInfoController@submitDonate')->name('submit_donate');	//@submitDonate is a method
+Route::post('/submitContact', 'ContactInfoController@submitContact')->name('submit_contact');
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::namespace("Admin")->prefix('admin')->group(function(){
+ 	Route::get('/', 'dashboardcontroller@index')->name('admin.home');
+ 	Route::namespace('Auth')->group(function(){
+	 	Route::get('/login', 'logincontroller@showloginform')->name('admin.login');
+	 	Route::post('/login', 'LoginController@login');
+	 	Route::post('logout', 'logincontroller@logout')->name('admin.logout');
+ 	});
+});

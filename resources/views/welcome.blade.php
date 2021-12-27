@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.front_template')
 @section('content')
    <!-- Carousel Start -->
     <div class="carousel">
@@ -9,9 +9,10 @@
                         <img src="{{asset('img/carousel-1.jpg')}}" alt="Image">
                     </div>
                     <div class="carousel-text">
-                        <h1>Let's be kind for children</h1>
+                        <!-- <h1>Let's be kind for children</h1> -->
+                        <h1>Spread a little warmth</h1>
                         <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
+                            ANURANJAN has extended its love and warmth to the children and the older ones in our neighborhood who are living in despair. We are distributing warm clothes and feminine hygiene essentials among the needy ones around us. With a little charity and warmth of your heart you can take part in protecting them from shivering in the cold.
                         </p>
                         <div class="carousel-btn">
                             <a class="btn btn-custom" href="{{route('pages','donate')}}">Donate Now</a>
@@ -26,7 +27,7 @@
                     <div class="carousel-text">
                         <h1>Get Involved with helping hand</h1>
                         <p>
-                            Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
+                            ANURANJAN has extended its love and warmth to the children and the older ones in our neighborhood who are living in despair. We are distributing warm clothes and feminine hygiene essentials among the needy ones around us. With a little charity and warmth of your heart you can take part in protecting them from shivering in the cold.
                         </p>
                         <div class="carousel-btn">
                             <a class="btn btn-custom" href="{{route('pages','donate')}}">Donate Now</a>
@@ -41,7 +42,7 @@
                     <div class="carousel-text">
                         <h1>Bringing smiles to millions</h1>
                         <p>
-                            Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam. Proin pellentesque odio
+                            ANURANJAN has extended its love and warmth to the children and the older ones in our neighborhood who are living in despair. We are distributing warm clothes and feminine hygiene essentials among the needy ones around us. With a little charity and warmth of your heart you can take part in protecting them from shivering in the cold.
                         </p>
                         <div class="carousel-btn">
                             <a class="btn btn-custom" href="{{route('pages','donate')}}">Donate Now</a>
@@ -83,7 +84,7 @@
                 <div class="col-lg-6">
                     <div class="section-header">
                         <p>Learn About Us</p>
-                        <h2>Worldwide non-profit charity organization</h2>
+                        <h2>A Social Welfare Organization</h2>
                     </div>
                     <div class="about-tab">
                         <ul class="nav nav-pills nav-justified">

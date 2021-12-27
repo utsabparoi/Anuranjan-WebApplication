@@ -19,7 +19,7 @@
         
         <!-- Donate Start -->
         <div class="container">
-            <div class="donate" data-parallax="scroll" data-image-src="img/donate.jpg">
+            <div class="donate" data-parallax="scroll" data-image-src="{{asset('img/donate.jpg')}}">
                 <div class="row align-items-center">
                     <div class="col-lg-7">
                         <div class="donate-content">
@@ -36,56 +36,61 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="donate-form">
-                            <form>
+                            <form action="{{route('submit_donate')}}" method="post">
+                                @csrf
                                 <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Name" required="required" />
+                                    <input type="text" name="user_name" class="form-control" placeholder="Name" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Email" required="required" />
+                                    <input type="email" name="user_email" class="form-control" placeholder="Email" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <input type="tel" class="form-control" placeholder="Phone" required="required" />
+                                    <input type="tel" name="user_contact" class="form-control" placeholder="Phone" required="required" />
                                 </div>
                                 <div class="control-group">
                                     <h5>Date of Birth:</h5>
-                                    <input type="date" class="form-control" placeholder="Date of Birth" required="required" />
+                                    <input type="date" name="user_dob" class="form-control" placeholder="Date of Birth" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Occupation" required="required" />
+                                    <input type="text" name="user_occupation" class="form-control" placeholder="Occupation" required="required" />
                                 </div>
                                 <h5>Would you like to member of our organization?</h5>
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-custom active">
-                                        <input type="radio" name="options"> YES
+                                        <input type="radio" name="user_membership"> YES
                                     </label>
                                     <label class="btn btn-custom">
-                                        <input type="radio" name="options"> NO
+                                        <input type="radio" name="user_membership"> NO
                                     </label>
                                 </div>
                                 <h5>Aggrement for:</h5>
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-custom active">
-                                        <input type="radio" name="options"> 1 year
+                                        <input type="radio" name="user_aggrement"> Not Interested
+                                    </label>
+                                    <label class="btn btn-custom active">
+                                        <input type="radio" name="user_aggrement"> 1 year
                                     </label>
                                     <label class="btn btn-custom">
-                                        <input type="radio" name="options"> 2 years
+                                        <input type="radio" name="user_aggrement"> 2 years
                                     </label>
                                     <label class="btn btn-custom">
-                                        <input type="radio" name="options"> 3 years
+                                        <input type="radio" name="user_aggrement"> 3 years
                                     </label>
                                 </div>
                                 <!-- <div class="control-group">
                                     <input type="text" class="form-control" placeholder="Aggrement" required="required" />
                                 </div> -->
+                                <h5>Please make your donation for better tomorrow:</h5>
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-custom">
-                                        <input type="radio" name="options"> $10
+                                        <input type="radio" name="user_amount"> $10
                                     </label>
                                     <label class="btn btn-custom active">
-                                        <input type="radio" name="options"> $20
+                                        <input type="radio" name="user_amount"> $20
                                     </label>
                                     <label class="btn btn-custom">
-                                        <input type="radio" name="options"> $30
+                                        <input type="radio" name="user_amount"> $30
                                     </label>
                                 </div>
                                 <div>
