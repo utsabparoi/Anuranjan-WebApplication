@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.front_template')
 @section('content')        
         <!-- Page Header Start -->
         <div class="page-header">
@@ -63,20 +63,9 @@
                                         <input type="radio" name="user_membership"> NO
                                     </label>
                                 </div>
-                                <h5>Aggrement for:</h5>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-custom active">
-                                        <input type="radio" name="user_aggrement"> Not Interested
-                                    </label>
-                                    <label class="btn btn-custom active">
-                                        <input type="radio" name="user_aggrement"> 1 year
-                                    </label>
-                                    <label class="btn btn-custom">
-                                        <input type="radio" name="user_aggrement"> 2 years
-                                    </label>
-                                    <label class="btn btn-custom">
-                                        <input type="radio" name="user_aggrement"> 3 years
-                                    </label>
+                                <div class="form-group">
+                                  <label for="aggrement"><b>Aggrement</b></label>
+                                  <input type="number" name="user_aggrement" class="form-control" id="aggrement" placeholder="Your aggrement">
                                 </div>
                                 <!-- <div class="control-group">
                                     <input type="text" class="form-control" placeholder="Aggrement" required="required" />

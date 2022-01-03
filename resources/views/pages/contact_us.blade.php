@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.front_template')
 @section('content')
     <!-- Page Header Start -->
     <div class="page-header">

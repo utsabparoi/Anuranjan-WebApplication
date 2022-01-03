@@ -67,11 +67,11 @@
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="{{route('admin.home')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>Admin </b>Panel</span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -97,7 +97,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{{ asset('/images/admin/') }}/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="{{ asset('/img/admin/') }}/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Support Team
@@ -110,7 +110,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{{ asset('/images/admin/') }}/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="{{ asset('/img/admin/') }}/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         AdminLTE Design Team
@@ -122,7 +122,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{{ asset('/images/admin/') }}/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="{{ asset('/img/admin/') }}/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Developers
@@ -134,7 +134,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{{ asset('/images/admin/') }}/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="{{ asset('/img/admin/') }}/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Sales Department
@@ -146,7 +146,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{{ asset('/images/admin/') }}/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="{{ asset('/img/admin/') }}/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Reviewers
@@ -283,13 +283,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{ asset('/images/admin/') }}/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="{{ asset('/img/admin/') }}/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="{{ asset('/images/admin/') }}/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="{{ asset('/img/admin/') }}/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   Alexander Pierce - Web Developer
@@ -347,7 +347,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="{{ asset('/images/admin/') }}/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="{{ asset('/img/admin/') }}/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -370,11 +370,11 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active">
-          <a href="#">
+          <a href="{{route('admin.home')}}">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
+            <!-- <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
-            </span>
+            </span> -->
           </a>
         </li>
 
@@ -394,17 +394,34 @@
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i> <span>Category</span>
+            <i class="fa fa-edit"></i> <span>Manage Member</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
             <li>
-              <a href="#"><i class="fa fa-circle-o"></i> Add New Category</a>
+              <a href="{{ route ('member.create') }}"><i class="fa fa-circle-o"></i> Add New Member</a>
             </li>
             <li>
-              <a href="#"><i class="fa fa-circle-o"></i> View Categories</a>
+              <a href="{{ route ('member.index') }}"><i class="fa fa-circle-o"></i> View Members</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>Donation</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <!-- <li>
+              <a href="#"><i class="fa fa-circle-o"></i> Add New Product</a>
+            </li> -->
+            <li>
+              <a href="{{route ('donation.index')}}"><i class="fa fa-circle-o"></i> View Donations</a>
             </li>
           </ul>
         </li>
@@ -425,24 +442,6 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-        </li>
-
-
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>Product</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li>
-              <a href="#"><i class="fa fa-circle-o"></i> Add New Product</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-circle-o"></i> View Products</a>
-            </li>
-          </ul>
         </li>
 
         <!-- ---------------Order-------------- -->
@@ -474,7 +473,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.18
     </div>
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
+    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">Edusoft</a>.</strong> All rights
     reserved.
   </footer>
 

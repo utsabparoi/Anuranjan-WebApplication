@@ -27,6 +27,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::namespace("Admin")->prefix('admin')->group(function(){
  	Route::get('/', 'dashboardcontroller@index')->name('admin.home');
+
+ 	//donation route start
+ 	Route::resource('donation', 'DonationController');
+ 	//donation route end
+
+ 	//member route start
+ 	Route::resource('member', 'MemberController');
+ 	//member route end
+
  	Route::namespace('Auth')->group(function(){
 	 	Route::get('/login', 'logincontroller@showloginform')->name('admin.login');
 	 	Route::post('/login', 'LoginController@login');
