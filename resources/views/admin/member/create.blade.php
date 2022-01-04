@@ -10,7 +10,7 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Add New Member</li>
+        <li class="active">Member Add Application</li>
       </ol>
     </section>
 
@@ -26,42 +26,43 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form" action="{{route ('member.store')}}" method="post">
+            <form role="form" action="{{route ('member.store')}}" method="post" enctype="multipart/form-data">
+              @csrf
               <div class="box-body">
                 <div class="form-group">
                   <label for="member_name">Name</label>
-                  <input type="text" class="form-control" id="exampleInputName" placeholder="Enter name">
+                  <input type="text" class="form-control" id="exampleInputName" name="member_name" placeholder="Enter name">
                 </div>
                 <div class="form-group">
                   <label for="email_address">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  <input type="email" class="form-control" id="exampleInputEmail1" name="member_email" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                   <label for="contact_number">Contact number</label>
-                  <input type="tel" class="form-control" id="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"required>
+                  <input type="tel" class="form-control" id="phone" name="contact_number" placeholder="+880-1234567890">
                 </div>
                 <div class="form-group">
                   <label for="birthdate">Date of birth</label>
-                  <input type="date" class="form-control" id="birthday">
+                  <input type="date" class="form-control" id="birthday" name="member_birthdate">
                   <p><strong>Note:</strong> type="date" is not supported in Internet Explorer 11 or prior Safari 14.1.</p>
                 </div>
                 <div class="form-group">
                   <label for="member_occupation">Occupation</label>
-                  <input type="text" class="form-control" id="occupation" placeholder="Your occupation">
+                  <input type="text" class="form-control" id="occupation" name="member_occupation" placeholder="Your occupation">
                 </div>
                 <div class="form-group">
                   <label for="member_aggrement">Aggrement</label>
-                  <input type="number" class="form-control" id="aggrement" placeholder="Your aggrement">
+                  <input type="number" class="form-control" id="aggrement" name="member_aggrement" placeholder="Your aggrement">
                 </div>
                 <div class="form-group">
                   <label for="member_image">Upload profile picture</label>
-                  <input type="file" id="member_image">
+                  <input type="file" id="member_image" name="member_image">
                 </div>
-                <div class="checkbox">
+                <!-- <div class="checkbox">
                   <label>
                     <input type="checkbox"> Check me out
                   </label>
-                </div>
+                </div> -->
               </div>
               <!-- /.box-body -->
 

@@ -97,7 +97,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{{ asset('/img/admin/') }}/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="{{ asset('/img/admin/') }}/admin_user-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Support Team
@@ -113,7 +113,7 @@
                         <img src="{{ asset('/img/admin/') }}/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
-                        AdminLTE Design Team
+                        Edusoft Design Team
                         <small><i class="fa fa-clock-o"></i> 2 hours</small>
                       </h4>
                       <p>Why not buy a new awesome theme?</p>
@@ -283,17 +283,17 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{ asset('/img/admin/') }}/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <img src="{{ asset('/img/admin/') }}/admin_user-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Utsab Paroi</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="{{ asset('/img/admin/') }}/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="{{ asset('/img/admin/') }}/admin_user-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  Utsab Paroi - Software Engineer
+                  <small>Member since Nov. 2020</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -347,10 +347,10 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="{{ asset('/img/admin/') }}/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="{{ asset('/img/admin/') }}/admin_user-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>Utsab Paroi</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -417,11 +417,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <!-- <li>
-              <a href="#"><i class="fa fa-circle-o"></i> Add New Product</a>
-            </li> -->
             <li>
-              <a href="{{route ('donation.index')}}"><i class="fa fa-circle-o"></i> View Donations</a>
+              <a href="#"><i class="fa fa-circle-o"></i>All Donation</a>
+            </li>
+            <li>
+              <a href="{{route ('donation.index')}}"><i class="fa fa-circle-o"></i>View Donations</a>
             </li>
           </ul>
         </li>
