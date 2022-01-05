@@ -649,7 +649,7 @@
     
     
     <!-- Contact Start -->
-    <div class="contact">
+    <!-- <div class="contact">
         <div class="container">
             <div class="section-header text-center">
                 <p>Get In Touch</p>
@@ -683,7 +683,7 @@
                     </form>
                 </div>
         </div>
-    </div>
+    </div> -->
     <!-- Contact End -->
 
 

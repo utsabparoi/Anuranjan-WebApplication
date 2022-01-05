@@ -67,7 +67,7 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" onclick="return confirm('Member Added Successfully')">Submit</button>
               </div>
             </form>
           </div>
@@ -77,5 +77,5 @@
     </section>
     <!-- /.content -->
 </div>
-  
+
 @endsection

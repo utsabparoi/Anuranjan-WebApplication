@@ -38,13 +38,17 @@
                         <div class="donate-form">
                             <form action="{{route('submit_donate')}}" method="post">
                                 @csrf
+                                
                                 <div class="control-group">
+                                    <h5>Your Full Name:</h5>
                                     <input type="text" name="user_name" class="form-control" placeholder="Name" required="required" />
                                 </div>
                                 <div class="control-group">
+                                    <h5>Email Address:</h5>
                                     <input type="email" name="user_email" class="form-control" placeholder="Email" required="required" />
-                                </div>
+                                </div>                                
                                 <div class="control-group">
+                                    <h5>Contact Number:</h5>
                                     <input type="tel" name="user_contact" class="form-control" placeholder="Phone" required="required" />
                                 </div>
                                 <div class="control-group">
@@ -52,6 +56,7 @@
                                     <input type="date" name="user_dob" class="form-control" placeholder="Date of Birth" required="required" />
                                 </div>
                                 <div class="control-group">
+                                    <h5>Your Occupation:</h5>
                                     <input type="text" name="user_occupation" class="form-control" placeholder="Occupation" required="required" />
                                 </div>
                                 <h5>Would you like to member of our organization?</h5>
@@ -64,7 +69,8 @@
                                     </label>
                                 </div>
                                 <div class="form-group">
-                                  <label for="aggrement"><b>Aggrement</b></label>
+                                  <!-- <label for="aggrement"><b>Aggrement</b></label> -->
+                                  <h5>Aggrement (in year)</h5>
                                   <input type="number" name="user_aggrement" class="form-control" id="aggrement" placeholder="Your aggrement">
                                 </div>
                                 <!-- <div class="control-group">
