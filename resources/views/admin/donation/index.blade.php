@@ -6,11 +6,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Member Management
+        View All Donation
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Member Management</li>
+        <li class="active">View All Donation</li>
       </ol>
     </section>
 
@@ -22,13 +22,13 @@
           <table id="example1" class="table table-bordered table-striped">
             <thead>
               <tr>
-                <th>Member Id</th>
-                <th>Member Name</th>
+                <th>User Id</th>
+                <th>Name</th>
                 <th>Email Address</th>
                 <th>Phone</th>
-                <th>Aggrement</th>
-                <th>Member Image</th>
-                <th>Action</th>
+                <th>Occupation</th>
+                <th>Donation Amount</th>
+                <!-- <th>Action</th> -->
               </tr>
             </thead>
             <tbody>
@@ -38,16 +38,16 @@
                   <td>{{$row->name}}</td>
                   <td>{{$row->email}}</td>
                   <td>{{$row->contact_number}}</td>
-                  <td>{{$row->aggrement}}</td>
-                  <!-- <td>{{$row->member_photo}}</td> -->
-                  <td align="center">
+                  <td>{{$row->occupation}}</td>
+                  <td>{{$row->donation_amount}}</td>
+                  <!-- <td align="center">
                     @if($row->member_photo != null)
                     <img src="{{ asset('uploads/member/thumbnail').'/'.$row->member_photo }}" alt="" width="80px">
                     @else
                     <img src="{{ asset('uploads/member/no_member.png') }}" alt="" width="50px" height="50px">
                     @endif
-                  </td>
-                  <td>
+                  </td> -->
+                  <!-- <td>
                     <button onclick="window.location='{{ url('/')}}/admin/member/{{$row->id}}/edit'" class="btn btn-warning mb-2">Edit</button>
 
                     <form id="deleteMember_{{$row->id}}" action="{{ url('/')}}/admin/member/{{$row->id}}" style="display: inline;" method="POST">
@@ -56,7 +56,7 @@
                       <input class="btn btn-danger deleteLink" name="{{ $row->name }}" id="{{$row->id}}" data-toggle="modal" data-target="#modal-danger" deleteID="{{$row->id}}" value="Delete" style="width: 100px;">
                     </form>
 
-                  </td>                 
+                  </td>  -->                
                 </tr>
               @endforeach
             </tbody>
@@ -69,7 +69,7 @@
 </div>
 <!-- /.content-wrapper -->
 
-<div class="modal modal-danger fade" id="modal-danger">
+<!-- <div class="modal modal-danger fade" id="modal-danger">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -88,5 +88,5 @@
     <!-- /.modal-content -->
   </div>
   <!-- /.modal-dialog -->
-</div>
+</div> -->
 @endsection

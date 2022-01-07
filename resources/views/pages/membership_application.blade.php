@@ -1,12 +1,12 @@
 @extends('layouts.front_template')
 @section('content')        
-    <div class="hero-wrap" style="background-image: url({{asset('images/UN0382261-1500x1000.jpg')}});" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap" style="background-image: url({{asset('images/Donate-to-Winstons-Wish.jpg')}});" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="{{url('/')}}">Home</a></span> <span>Donate</span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Donations</h1>
+             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="{{url('/')}}">Home</a></span> <span>Membership Application</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Become a Member</h1>
           </div>
         </div>
       </div>
@@ -16,18 +16,13 @@
         <div class="overlay"></div>
 
         <div class="container">
-            <div class="col-md-12 d-flex"">
-                <div class="block-18 color-2 align-items-stretch">
-                  <div class="text">
-                    <h3 class="mb-4"><strong>Would you like to be a member of our organization?</strong></h3>
-                    <p><a href="{{route('pages','membership_application')}}" class="btn btn-white px-3 py-2 mt-2"><b>Membership Application</b></a></p>
-                  </div>
-                </div>
-            </div>
             <div class="row d-md-flex">
-                
-                <div class="col-md-6 volunteer pl-md-4 ftco-animate">
-                    <h1 class="mb-3">Be a <strong>Donor</strong></h1>
+                <div class="col-md-6 d-flex ftco-animate">
+                    <div class="img img-2 align-self-stretch" style="background-image: url({{asset('images/ph_1877_99952.jpg')}});"></div>
+                </div>
+                <!-- <form action="{{route('submit_donate')}}" method="post"> -->
+                <div class="col-md-6 volunteer pl-md-5 ftco-animate">
+                    <h1 class="mb-3">Be a <strong>Member</strong></h1>
                     <form action="{{route('submit_donate')}}" method="post" class="volunter-form">
                         @csrf
                         <div class="form-group">
@@ -42,10 +37,10 @@
                             <h5><b>Contact Number:</b></h5>
                             <input type="tel" name="user_contact" class="form-control" placeholder="+880 1XXX NNNNNN" required="required" />
                         </div>
-                        <!-- <div class="form-group">
-                            <h5>Date of Birth:</h5>
+                        <div class="form-group">
+                            <h5><b>Date of Birth:</b></h5>
                             <input type="date" name="user_dob" class="form-control" placeholder="Date of Birth" required="required" />
-                        </div> -->
+                        </div>
                         <div class="form-group">
                             <h5><b>Your Occupation:</b></h5>
                             <input type="text" name="user_occupation" class="form-control" placeholder="Ex: Software Engineer" required="required" />
@@ -58,23 +53,25 @@
                             <label for="no">
                                 <input type="radio" name="user_membership" value="No"><b style="color:black"> NO</b>
                             </label>
-                        </div>
-                        <div class="form-group">
-                          <h5>Make sure your aggrement:</h5>
-                          <input type="number" name="user_aggrement" class="form-control" id="aggrement" placeholder="year">
                         </div> -->
-                        <h5><b>Please make your donation for better tomorrow:</b></h5>
+                        <div class="form-group">
+                          <h5><b>Make sure your aggrement:</b></h5>
+                          <input type="number" name="user_aggrement" class="form-control" id="aggrement" placeholder="year">
+                        </div>
+                        <!-- <h5><b>Please make your donation for better tomorrow:</b></h5>
                         <div class="form-group">
                           <input type="number" name="user_amount" class="form-control" id="donation" placeholder="$">
+                        </div> -->
+                        <div class="form-group">
+                          <h5><b>Upload your profile photo</b></h5>
+                          <input type="file" id="member_image" name="member_image">
                         </div>
                         <div class="form-group">
                           <input type="submit" value="Submit" class="btn btn-white py-3 px-5">
                         </div>
                     </form>
                 </div>
-                <div class="col-md-6 d-flex ftco-animate">
-                    <div class="img img-2 align-self-stretch" style="background-image: url({{asset('images/176f09742b82b6258cc4a8b5763de2311585292482.jpg')}});"></div>
-                </div>
+                
             </div>    
         </div>
     </section>

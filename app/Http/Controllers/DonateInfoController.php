@@ -16,11 +16,8 @@ class DonateInfoController extends Controller
     	$donate_info->name = $donate_data['user_name'];
 		$donate_info->email = $donate_data['user_email'];
 		$donate_info->contact_number = $donate_data['user_contact'];
-		$donate_info->dob = $donate_data['user_dob'];
-		$donate_info->occupation = $donate_data['user_name'];
-		$donate_info->membership = $donate_data['user_membership'];
-		$donate_info->aggrement = $donate_data['user_aggrement'];
-		$donate_info->donate_amount = $donate_data['user_amount'];
+		$donate_info->occupation = $donate_data['user_occupation'];
+		$donate_info->donation_amount = $donate_data['user_amount'];
 
 		$donate_info->save();
 		

@@ -45,14 +45,14 @@
           <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
           <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
           <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="{{route('pages','contact_us')}}" class="nav-link">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
     <!-- END nav -->
     
-    @yield('content');
+    @yield('content')
 
     <footer class="ftco-footer ftco-section img">
         <div class="overlay"></div>

@@ -1,62 +1,64 @@
 @extends('layouts.front_template')
 @section('content')
-    <!-- Page Header Start -->
-    <div class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2>Contact Us</h2>
-                </div>
-                <div class="col-12">
-                    <a href="">Home</a>
-                    <a href="">Contact</a>
-                </div>
-            </div>
+    <div class="hero-wrap" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Contact Us</h1>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- Page Header End -->
+
     
-    
-    <!-- Contact Start -->
-    <div class="contact">
-        <div class="container">
-            <div class="section-header text-center">
-                <p>Get In Touch</p>
-                <h2>Contact for any query</h2>
-            </div>
-            <div class="contact-img">
-                <img src="{{asset('img/contact.jpg')}}" alt="Image">
-            </div>
-            <div class="contact-form">
-                    <div id="success"></div>
-                    <form action="{{route('submit_contact')}}" method="post">
-                        @csrf
-                        <div class="control-group">
-                            <input type="text" name="user_name" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="email" name="user_email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" name="user_contact" class="form-control" id="contact_number" placeholder="Phone" required="required" data-validation-required-message="Please enter your contact number" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" name="user_subject" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <textarea class="form-control" name="user_message" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div>
-                            <button class="btn btn-custom" type="submit" id="sendMessageButton">Send Message</button>
-                        </div>
-                    </form>
-                </div>
+    <section class="ftco-section contact-section ftco-degree-bg">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info">
+          <div class="col-md-12 mb-4">
+            <h2 class="h4">Contact Information</h2>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-md-3">
+            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Website</span> <a href="#">yoursite.com</a></p>
+          </div>
         </div>
-    </div>
-    <!-- Contact End -->
+        <div class="row block-9">
+          <div class="col-md-6 pr-md-5">
+            <h4 class="mb-4">Do you have any questions?</h4>
+            <form action="#">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+          
+          </div>
+
+          <div class="col-md-6" id="map"></div>
+        </div>
+      </div>
+    </section>
+
 @endsection

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use App\DonateInfo;
 
 class DonationController extends Controller
 {
@@ -18,7 +20,8 @@ class DonationController extends Controller
      */
     public function index()
     {
-        echo "donation index";
+        $data = DonateInfo::all();  //DonateInfo is the model name.
+        return view('admin.donation.index', compact('data'));
     }
 
     /**
@@ -28,7 +31,8 @@ class DonationController extends Controller
      */
     public function create()
     {
-        //
+        // $data = array();
+        // return view('admin.donation.create', ['data'=>$data]);
     }
 
     /**

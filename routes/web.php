@@ -17,7 +17,7 @@ Route::view('/','welcome');
 
 // Route::get('/about_us', 'AboutusController@index')->name('about_us');
 
-Route::get('{pages}','AllPages')->name('pages')->where('pages','about_us|contact_us|donate');
+Route::get('{pages}','AllPages')->name('pages')->where('pages','about_us|contact_us|donate|membership_application');
 Route::post('/submitDonate', 'DonateInfoController@submitDonate')->name('submit_donate');	//@submitDonate is a method
 Route::post('/submitContact', 'ContactInfoController@submitContact')->name('submit_contact');
 

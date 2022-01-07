@@ -7658,7 +7658,7 @@ h1, h2, h3, h4, h5,
         color: #fff; }
   .btn.btn-white {
     background: #fff;
-    border: 1px solid #fff;
+    border: 1px solid #000000;
     color: #000;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -7781,7 +7781,7 @@ h1, h2, h3, h4, h5,
     right: 0;
     bottom: 0;
     content: '';
-    opacity: .9;
+    opacity: .8;
     background: #f86f2d; }
   .ftco-section-3 .img {
     width: 100%; }
@@ -8279,7 +8279,7 @@ textarea.form-control {
 
 .ftco-footer {
   font-size: 16px;
-  padding: 7em 0;
+  padding: 2em 0;
   background: #252525; }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;

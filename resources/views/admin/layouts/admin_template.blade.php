@@ -411,17 +411,34 @@
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i> <span>Donation</span>
+            <i class="fa fa-edit"></i> <span>Donation History</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
             <li>
-              <a href="#"><i class="fa fa-circle-o"></i>All Donation</a>
+              <a href="{{ route ('donation.create') }}"><i class="fa fa-circle-o"></i>Custom Donation</a>
             </li>
             <li>
-              <a href="{{route ('donation.index')}}"><i class="fa fa-circle-o"></i>View Donations</a>
+              <a href="{{route ('donation.index')}}"><i class="fa fa-circle-o"></i>View All Donation</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>Manage Volunteer</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li>
+              <a href="#"><i class="fa fa-circle-o"></i>View Request</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-circle-o"></i>List of Volunteer</a>
             </li>
           </ul>
         </li>

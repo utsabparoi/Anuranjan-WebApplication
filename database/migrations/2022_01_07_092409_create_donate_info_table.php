@@ -20,7 +20,7 @@ class CreateDonateInfoTable extends Migration
                 $table->string('email');
                 $table->string('contact_number');
                 $table->string('occupation');
-                $table->string('donate_amount');
+                $table->string('donation_amount');
                 $table->timestamps();
             });
         }
