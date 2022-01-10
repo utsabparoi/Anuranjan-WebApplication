@@ -106,7 +106,10 @@ class MemberController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['single_info'] = DB::table('Members')->where('id', $id)->first();
+        //dd($data['single_info']);
+       
+        return view('admin.member.edit', ['data'=>$data]);
     }
 
     /**
@@ -118,7 +121,7 @@ class MemberController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd($request);
     }
 
     /**
