@@ -33,28 +33,28 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="member_name">Name</label>
-                  <input type="text" class="form-control" id="exampleInputName" name="member_name" placeholder="Enter name">
+                  <input type="text" class="form-control" id="exampleInputName" name="member_name" value="{{old('name') ?? $data['single_info']->name }}" placeholder="">
                 </div>
                 <div class="form-group">
                   <label for="email_address">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" name="member_email" placeholder="Enter email">
+                  <input type="email" class="form-control" id="exampleInputEmail1" name="member_email" value="{{old('email') ?? $data['single_info']->email }}" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                   <label for="contact_number">Contact number</label>
-                  <input type="tel" class="form-control" id="phone" name="contact_number" placeholder="+880-1234567890">
+                  <input type="tel" class="form-control" id="phone" name="contact_number" value="{{old('contact_number') ?? $data['single_info']->contact_number }}" placeholder="+880-1234567890">
                 </div>
                 <div class="form-group">
                   <label for="birthdate">Date of birth</label>
-                  <input type="date" class="form-control" id="birthday" name="member_birthdate">
+                  <input type="date" class="form-control" id="birthday" name="member_birthdate" value="{{old('dob') ?? $data['single_info']->dob }}">
                   <p><strong>Note:</strong> type="date" is not supported in Internet Explorer 11 or prior Safari 14.1.</p>
                 </div>
                 <div class="form-group">
                   <label for="member_occupation">Occupation</label>
-                  <input type="text" class="form-control" id="occupation" name="member_occupation" placeholder="Your occupation">
+                  <input type="text" class="form-control" id="occupation" name="member_occupation" value="{{old('occupation') ?? $data['single_info']->occupation }}" placeholder="Your occupation">
                 </div>
                 <div class="form-group">
                   <label for="member_aggrement">Aggrement</label>
-                  <input type="number" class="form-control" id="aggrement" name="member_aggrement" placeholder="Your aggrement">
+                  <input type="number" class="form-control" id="aggrement" name="member_aggrement" value="{{old('aggrement', $data['single_info']->aggrement) }}" placeholder="Your aggrement">
                 </div>
                 <div class="form-group">
                   <label for="member_image">Upload profile picture</label>
@@ -69,7 +69,7 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary" onclick="return confirm('Member Added Successfully')">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </form>
           </div>
