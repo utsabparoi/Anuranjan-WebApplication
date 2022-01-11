@@ -20,6 +20,7 @@ Route::view('/','welcome');
 Route::get('{pages}','AllPages')->name('pages')->where('pages','about_us|contact_us|donate|membership_application');
 Route::post('/submitDonate', 'DonateInfoController@submitDonate')->name('submit_donate');	//@submitDonate is a method
 Route::post('/submitContact', 'ContactInfoController@submitContact')->name('submit_contact');
+// Route::post('/submitMember', 'MemberInfoController@submitMember')->name('submit_member');
 
 Auth::routes();
 

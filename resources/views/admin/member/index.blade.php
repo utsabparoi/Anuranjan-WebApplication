@@ -89,4 +89,26 @@
   </div>
   <!-- /.modal-dialog -->
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#example1').DataTable({
+      "order": [],
+    });
+
+    $('.deleteLink').click(function() {
+      var member_name = $(this).attr('name');
+      var member_id = $(this).attr('id');
+      console.log(member_name);
+      $('#modal-danger .memname').empty();
+      $('#modal-danger .memname').append(member_name);
+      $('#modal-danger .submitDeleteModal').attr('id', member_id)
+    });
+
+    $('.submitDeleteModal').click(function() {
+      var member_id = $(this).attr('id');
+      $('#deleteCategory_' + member_id).submit();
+    });
+  });
+</script>
 @endsection

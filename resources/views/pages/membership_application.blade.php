@@ -23,45 +23,32 @@
                 <!-- <form action="{{route('submit_donate')}}" method="post"> -->
                 <div class="col-md-6 volunteer pl-md-5 ftco-animate">
                     <h1 class="mb-3">Be a <strong>Member</strong></h1>
-                    <form action="{{route('submit_donate')}}" method="post" class="volunter-form">
+                    <form action="{{route ('member.store')}}" method="post" class="volunter-form" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <h5><b>Your Full Name:</b></h5>
-                            <input type="text" name="user_name" class="form-control" placeholder="" required="required" />
+                            <input type="text" name="member_name" class="form-control" placeholder="" required="required" />
                         </div>
                         <div class="form-group">
                             <h5><b>Email Address:</b></h5>
-                            <input type="email" name="user_email" class="form-control" placeholder="" required="required" />
+                            <input type="email" name="member_email" class="form-control" placeholder="" required="required" />
                         </div>                                
                         <div class="form-group">
                             <h5><b>Contact Number:</b></h5>
-                            <input type="tel" name="user_contact" class="form-control" placeholder="+880 1XXX NNNNNN" required="required" />
+                            <input type="tel" name="contact_number" class="form-control" placeholder="+880 1XXX NNNNNN" required="required" />
                         </div>
                         <div class="form-group">
                             <h5><b>Date of Birth:</b></h5>
-                            <input type="date" name="user_dob" class="form-control" placeholder="Date of Birth" required="required" />
+                            <input type="date" name="member_birthdate" class="form-control" placeholder="Date of Birth" required="required" />
                         </div>
                         <div class="form-group">
                             <h5><b>Your Occupation:</b></h5>
-                            <input type="text" name="user_occupation" class="form-control" placeholder="Ex: Software Engineer" required="required" />
+                            <input type="text" name="member_occupation" class="form-control" placeholder="Ex: Software Engineer" required="required" />
                         </div>
-                        <!-- <h5>Would you like to member of our organization?</h5>
-                        <div>
-                            <label for="yes">
-                                <input type="radio" name="user_membership" value="Yes"><b style="color:black"> YES</b>
-                            </label>
-                            <label for="no">
-                                <input type="radio" name="user_membership" value="No"><b style="color:black"> NO</b>
-                            </label>
-                        </div> -->
                         <div class="form-group">
                           <h5><b>Make sure your aggrement:</b></h5>
-                          <input type="number" name="user_aggrement" class="form-control" id="aggrement" placeholder="year">
+                          <input type="number" name="member_aggrement" class="form-control" id="aggrement" placeholder="year">
                         </div>
-                        <!-- <h5><b>Please make your donation for better tomorrow:</b></h5>
-                        <div class="form-group">
-                          <input type="number" name="user_amount" class="form-control" id="donation" placeholder="$">
-                        </div> -->
                         <div class="form-group">
                           <h5><b>Upload your profile photo</b></h5>
                           <input type="file" id="member_image" name="member_image">

@@ -689,7 +689,7 @@
 </div>
 <!-- ./wrapper -->
 
-
+@include('sweetalert::alert')
 
 
 </body>

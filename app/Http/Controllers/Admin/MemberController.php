@@ -84,7 +84,13 @@ class MemberController extends Controller
 
         $member_model->save();
 
-        return Redirect::to('/admin/member/create');
+        if ($request->hidden_field == 1) {
+            return Redirect::to('/admin/member/create');
+        }
+        else{
+            return Redirect::to('/');
+        }
+        
     }
 
     /**

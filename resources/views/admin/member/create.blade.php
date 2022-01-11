@@ -29,6 +29,9 @@
             <form role="form" action="{{route ('member.store')}}" method="post" enctype="multipart/form-data">
               @csrf
               <div class="box-body">
+                <div class="form-check">
+                  <input type="hidden" class="form-control" id="exampleInputName" name="hidden_field" value="1">
+                </div>
                 <div class="form-group">
                   <label for="member_name">Name</label>
                   <input type="text" class="form-control" id="exampleInputName" name="member_name" placeholder="Enter name">
