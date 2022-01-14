@@ -101,7 +101,10 @@ class MemberController extends Controller
      */
     public function show($id)
     {
-        //
+        $data['single_info'] = DB::table('Members')->where('id', $id)->first();
+        //dd($data['single_info']);
+       
+        return view('admin.member.edit', ['data'=>$data]);
     }
 
     /**
@@ -127,53 +130,59 @@ class MemberController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input = $request->all();
+        // $input = $request->all();
 
-        $member = Member::find($id);
-        $member->name = $input['name'];
-        $member->email = $input['email'];
-        $member->contact_number = $input['contact_number'];
-        $member->dob = $input['dob'];
-        $member->occupation = $input['occupation'];
-        $member->aggrement = $input['aggrement'];
-        $member->member_photo = $input['member_photo'];
+        // $member = Member::find($id);
+        // $member->name = $input['name'];
+        // $member->email = $input['email'];
+        // $member->contact_number = $input['contact_number'];
+        // $member->dob = $input['dob'];
+        // $member->occupation = $input['occupation'];
+        // $member->aggrement = $input['aggrement'];
+        // $member->member_photo = $input['member_photo'];
 
-        // $member_model = new Member();
-        // $member_model->name = $request->member_name;
-        // $member_model->email = $request->member_email;
-        // $member_model->contact_number = $request->contact_number;
-        // $member_model->dob = $request->member_birthdate;
-        // $member_model->occupation = $request->member_occupation;
-        // $member_model->aggrement = $request->member_aggrement;
+        $member_model = new Member();
 
-        // if($request->member_image){
-        //     // $member_image = time().'.'.$request->member_image->extension();  
-        //     // $request->member_image->move(public_path('uploads/member'), $member_image);
-        //     // $member_model->member_image = $member_image;
+        if( !$request->id) {          
+            return false;           
+        }
 
-        //     $member_photo   = $request->file('member_image');
-        //     $filename         = time().'_'.$member_photo->getClientOriginalName();
-        //     //echo $filename; exit();
-        //     $member_photo->move(public_path('uploads/member').'/original/',$filename);
+        $member_model = $member_model->find($request->id); // edit operation.
+        $member_model->name = $request->member_name;
+        $member_model->email = $request->member_email;
+        $member_model->contact_number = $request->contact_number;
+        $member_model->dob = $request->member_birthdate;
+        $member_model->occupation = $request->member_occupation;
+        $member_model->aggrement = $request->member_aggrement;
+
+        if($request->member_image){
+            // $member_image = time().'.'.$request->member_image->extension();  
+            // $request->member_image->move(public_path('uploads/member'), $member_image);
+            // $member_model->member_image = $member_image;
+
+            $member_photo   = $request->file('member_image');
+            $filename         = time().'_'.$member_photo->getClientOriginalName();
+            //echo $filename; exit();
+            $member_photo->move(public_path('uploads/member').'/original/',$filename);
             
-        //     $image_resize = Image::make(public_path('uploads/member').'/original/'.$filename);
-        //     $image_resize->resize(200, null, function ($constraint) {
-        //         $constraint->aspectRatio();
-        //     });
-        //     $image_resize->save(public_path('uploads/member').'/thumbnail/'.$filename);
-        //     $member_model->member_photo = $filename;
+            $image_resize = Image::make(public_path('uploads/member').'/original/'.$filename);
+            $image_resize->resize(200, null, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $image_resize->save(public_path('uploads/member').'/thumbnail/'.$filename);
+            $member_model->member_photo = $filename;
 
-        // } else {
-        //     $member_model->member_photo = null;    
-        // }
-        // //$member_model->parent_id = $request->parent_id;
-        // DB::table('members')->where('id', $id)
-        // ->update([
-        //     'name' =>$request['name'], 'email' =>$request['email'], 'contact_number' =>$request['contact_number'], 'dob' =>$request['dob'], 'occupation' =>$request['occupation'], 'aggrement' =>$request['aggrement'], 'member_photo' =>$request['member_photo']
-        // ]); 
-        $member->save();
+        } else {
+            $member_model->member_photo = null;    
+        }
+        //$member_model->parent_id = $request->parent_id;
+        DB::table('members')->where('id', $id)
+        ->update([
+            'name' =>$request['name'], 'email' =>$request['email'], 'contact_number' =>$request['contact_number'], 'dob' =>$request['dob'], 'occupation' =>$request['occupation'], 'aggrement' =>$request['aggrement'], 'member_photo' =>$request['member_photo']
+        ]); 
+        // $member->save();
         Session::flash('success-message', 'Successfully Performed !');        
-        return Redirect::to('admin.member.edit');
+        return Redirect::to('/');
     }
 
     /**
@@ -184,6 +193,14 @@ class MemberController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if( !$id ) { 
+        return false;
+       }
+       DB::table('members')->where('id', $id)->delete();
+            
+       //Session::flash('success-message', 'Successfully Deleted !');        
+       Alert::toast('Product Deleted Successfully!', 'success');
+       return Redirect::to('/admin/product');
     }
+
 }

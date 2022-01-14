@@ -6,11 +6,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Member Management
+        View Member Request
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Member Management</li>
+        <li class="active">View Member Request</li>
       </ol>
     </section>
 
@@ -48,13 +48,14 @@
                     @endif
                   </td>
                   <td>
-                    <button onclick="window.location='{{ url('/')}}/admin/member/{{$row->id}}/edit'" class="btn btn-warning mb-2">Edit</button>
+                    <button onclick="window.location=''" class="btn btn-info mb-2">Approve</button>
+                    <button onclick="window.location=''" class="btn btn-danger mb-2">Reject</button>
  
-                    <form id="deleteMember_{{$row->id}}" action="{{ url('/')}}/admin/member/{{$row->id}}" style="display: inline;" method="POST">
+                    <!-- <form id="deleteMember_{{$row->id}}" action="{{ url('/')}}/admin/member/{{$row->id}}" style="display: inline;" method="POST">
                       {{ method_field('DELETE') }}
                       @csrf
                       <input class="btn btn-danger deleteLink" name="{{ $row->name }}" id="{{$row->id}}" data-toggle="modal" data-target="#modal-danger" deleteID="{{$row->id}}" value="Delete" style="width: 100px;">
-                    </form>
+                    </form> -->
 
                   </td>                 
                 </tr>

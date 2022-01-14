@@ -401,10 +401,13 @@
           </a>
           <ul class="treeview-menu">
             <li>
+              <a href=""><i class="fa fa-circle-o"></i> View Member Request</a>
+            </li>
+            <li>
               <a href="{{ route ('member.create') }}"><i class="fa fa-circle-o"></i> Add New Member</a>
             </li>
             <li>
-              <a href="{{ route ('member.index') }}"><i class="fa fa-circle-o"></i> View Members</a>
+              <a href="{{ route ('member.index') }}"><i class="fa fa-circle-o"></i> List of Members</a>
             </li>
           </ul>
         </li>
@@ -421,7 +424,7 @@
               <a href="{{ route ('donation.create') }}"><i class="fa fa-circle-o"></i>Custom Donation</a>
             </li>
             <li>
-              <a href="{{route ('donation.index')}}"><i class="fa fa-circle-o"></i>View All Donation</a>
+              <a href="{{route ('donation.index')}}"><i class="fa fa-circle-o"></i>View All Donations</a>
             </li>
           </ul>
         </li>
@@ -435,10 +438,10 @@
           </a>
           <ul class="treeview-menu">
             <li>
-              <a href="#"><i class="fa fa-circle-o"></i>View Request</a>
+              <a href="#"><i class="fa fa-circle-o"></i>View Volunteer Request</a>
             </li>
             <li>
-              <a href="#"><i class="fa fa-circle-o"></i>List of Volunteer</a>
+              <a href="{{route ('volunteer.index')}}"><i class="fa fa-circle-o"></i>List of Volunteers</a>
             </li>
           </ul>
         </li>
