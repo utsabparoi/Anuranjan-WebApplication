@@ -438,10 +438,10 @@
           </a>
           <ul class="treeview-menu">
             <li>
-              <a href="#"><i class="fa fa-circle-o"></i>View Volunteer Request</a>
+              <a href="{{route ('volunteer.index')}}"><i class="fa fa-circle-o"></i>View Volunteer Request</a>
             </li>
             <li>
-              <a href="{{route ('volunteer.index')}}"><i class="fa fa-circle-o"></i>List of Volunteers</a>
+              <a href="#"><i class="fa fa-circle-o"></i>List of Volunteers</a>
             </li>
           </ul>
         </li>

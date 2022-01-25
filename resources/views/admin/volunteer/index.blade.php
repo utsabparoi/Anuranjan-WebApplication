@@ -50,12 +50,14 @@
                     @endif
                   </td>
                   <td>
-                    <button onclick="window.location='{{ url('/')}}/admin/volunteer/{{$row->id}}/edit'" class="btn btn-warning mb-2">Edit</button>
+                    <button onclick="window.location='{{ url('/')}}/admin/volunteer/{{$row->id}}/edit'" class="btn btn-warning mb-2">Approve</button>
+
+                    <button onclick="window.location='{{ url('/')}}/admin/volunteer/{{$row->id}}/edit'" class="btn btn-danger mb-2">Reject</button>
  
                     <form id="deleteVolunteer_{{$row->id}}" action="{{ url('/')}}/admin/volunteer/{{$row->id}}" style="display: inline;" method="POST">
                       {{ method_field('DELETE') }}
                       @csrf
-                      <input class="btn btn-danger deleteLink" name="{{ $row->name }}" id="{{$row->id}}" data-toggle="modal" data-target="#modal-danger" deleteID="{{$row->id}}" value="Delete" style="width: 100px;">
+                      <input class="btn btn-danger deleteLink" name="{{ $row->name }}" id="{{$row->id}}" data-toggle="modal" data-target="#modal-danger" deleteID="{{$row->id}}" value="Reject" style="width: 100px;">
                     </form>
 
                   </td>                 
